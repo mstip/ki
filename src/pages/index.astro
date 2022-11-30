@@ -1,4 +1,9 @@
 ---
+import TitleService from "../services/title.service";
+
+const titleService = new TitleService();
+
+const title = titleService.createTitle();
 ---
 
 <html lang="en">
@@ -10,6 +15,6 @@
 		<title>Kitchen</title>
 	</head>
 	<body>
-		<h1>Astro Kitchen</h1>
+		<h1>{title}</h1>
 	</body>
 </html>
