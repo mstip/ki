@@ -5,13 +5,18 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "dev-static": "astro dev --config astrostatic.config.mjs",
     "start": "astro dev",
     "build": "astro build",
+    "build-static": "astro build --config astrostatic.config.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/netlify": "^1.2.1",
-    "astro": "^1.6.11"
+    "@astrojs/solid-js": "^1.2.3",
+    "astro": "^1.6.11",
+    "axios": "^1.2.0",
+    "solid-js": "^1.6.2"
   }
 }

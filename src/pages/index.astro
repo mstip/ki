@@ -13,8 +13,22 @@ const title = titleService.createTitle();
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Kitchen</title>
+		<style>
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				text-align: center;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>{title}</h1>
+		<hr>
+		<p>Das ist die Astro Küche</p>
+		<a href="/blog">Blog</a> <br>
+		<a href="/blog/tageins">Blog - tageins</a><br>
+		<a href="/blog/tagzwei">Blog - tagzwei</a><br>
+		<a href="/blog/tagdrei">Blog - tagdrei</a><br>
+		<a href="/blog/404">Blog - 404</a><br>
+		<a href="/dynblog/25">dynblog - PIKACHU</a><br>
 	</body>
 </html>

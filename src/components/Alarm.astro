@@ -1,0 +1,10 @@
+---
+let { text } = Astro.props;
+if (!text) {
+  text = "ALARM";
+}
+---
+
+<div class="alert alert-danger" role="alert">
+  {text}
+</div>

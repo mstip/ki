@@ -1,0 +1,12 @@
+---
+import BootstrapLayout from "../layouts/BootstrapLayout.astro";
+import Alarm from "../components/Alarm.astro";
+import { Insel } from "../components/Insel";
+---
+
+<BootstrapLayout>
+  <Alarm text="das ist eine übung" />
+  <Insel client:load/>
+  <Insel client:only="solid-js"/>
+
+</BootstrapLayout>
