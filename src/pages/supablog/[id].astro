@@ -1,0 +1,24 @@
+---
+import BootstrapLayout from "../../layouts/BootstrapLayout.astro";
+
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://aufvuvjqbaqenxywchyi.supabase.co'
+const supabaseKey = import.meta.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+const {id} = Astro.params;
+
+const result = await supabase.from('posts').select('*').eq('id', id).single();
+if(result.error) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Nicht vorhanden'
+  });
+}
+
+---
+<BootstrapLayout>
+  <h1>{result.data.title}</h1>
+  <p>{result.data.body}</p>
+</BootstrapLayout>
